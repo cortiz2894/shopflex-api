@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drops",
+  "info": {
+    "singularName": "drop",
+    "pluralName": "drops",
+    "displayName": "Drop",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "drop"
+    }
+  }
+}
