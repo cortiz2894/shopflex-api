@@ -58,6 +58,21 @@
       "relation": "manyToOne",
       "target": "api::gender.gender",
       "inversedBy": "products"
+    },
+    "sizes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::size.size",
+      "mappedBy": "products"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "products"
+    },
+    "discount": {
+      "type": "integer"
     }
   }
 }

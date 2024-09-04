@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "drops",
+  "collectionName": "categories",
   "info": {
-    "singularName": "drop",
-    "pluralName": "drops",
-    "displayName": "Drop",
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category",
     "description": ""
   },
   "options": {
@@ -18,22 +18,14 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     },
     "products": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::product.product",
-      "mappedBy": "drop"
-    },
-    "cover": {
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      "inversedBy": "categories"
     }
   }
 }
