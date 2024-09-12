@@ -73,6 +73,12 @@
     },
     "discount": {
       "type": "integer"
+    },
+    "colors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::color.color",
+      "mappedBy": "products"
     }
   }
 }
